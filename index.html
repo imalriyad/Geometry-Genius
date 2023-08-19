@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genious</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class=" text-white">
+    <header class="mx-auto max-w-screen-xl bg-[#add4ebb7] rounded md:px-4 py-4">
+      <div class="flex justify-between ">
+        <img class="md:w-40 w-32 mx-auto md:mx-0" src="./images/Interactive Geometry Genius.png" alt="">
+        <button class="btn md:px-8 px-6 md:block hidden text-white normal-case btn-info">Blog</button>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-screen-xl my-24 px-4 md:px-0">
+       <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+
+        <!-- Card number1 -->
+        <div id="card" class="card bg-[#8c7ae6] shadow-sm pt-8 border-[1px] border-gray-300">
+            <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+            <div class="card-body ">
+              <h2 class="card-title text-3xl">Triangle</h2>
+              <p>Area (A) = 0.5 × base × height</p>
+               <h2 class=" text-lg font-bold 
+               ">Area : <span id="area">00</span> cm<sup>2</sup></h2>
+              <div class="flex gap-3 mt-4 align-middle">
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded inline-" type="number" id="base-input" placeholder="Base"><p class="pt-1.5">cm</p>
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded" type="number" id="height-input" placeholder="Height"> <p class="pt-1.5">cm</p>
+              </div>
+
+               <div class="card-actions mt-6">
+                <button id="caulate-btn" class="btn btn-primary w-full ">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card number2 -->
+          <div id="card2" class="card bg-[#487eb0] shadow-sm pt-8 border-[1px] border-gray-300">
+            <figure class="rounded-none" ><img src="./images/rectangle.png" class="md:w-auto w-[250px]" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title text-3xl">Rectangle</h2>
+              <p>Area (A) = Width × Legnth</p>
+              <h2 class=" text-lg font-bold 
+              ">Area : <span id="area-rect">00</span>cm<sup>2</sup></h2>
+              <div class="flex gap-6 mt-4">
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded inline-" type="number" id="width-input" placeholder="Width"> <p class="pt-1.5">cm</p>
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded" type="number" id="legnth-input" placeholder="Legnth"> <p class="pt-1.5">cm</p>
+              </div>
+
+               <div class="card-actions mt-6">
+                <button id="caulate-btn-react" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card number3 -->
+          <div id="card3" class="card bg-[#0097e6] shadow-sm pt-8 border-[1px] border-gray-300">
+            <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+            <div  class="card-body ">
+              <h2 class="card-title text-3xl">Parallelogram</h2>
+              <p>Area (A) = Base × Height</p>
+              <h2 class=" text-lg font-bold 
+              ">Area : <span id="area-parallelogram">00</span> cm<sup>2</sup></h2>
+              <div class="flex gap-6 mt-4">
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded " type="number" id="base-inputValue" placeholder="Base"> <p class="pt-1.5">cm</p>
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded" type="number" id="height-inputValue" placeholder="Height "> <p class="pt-1.5">cm</p>
+              </div>
+               <div class="card-actions mt-6">
+                <button id="parallelogram-btn" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Number 4 -->
+          <div id="card4" class="card bg-[#273c75] shadow-sm pt-8 border-[1px] border-gray-300">
+            <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+            <div  class="card-body ">
+              <h2 class="card-title text-3xl">Rhombus</h2>
+              <p>Area (A) = 0.5 × d1 × d2</p>
+              <h2 class="text-lg font-bold 
+              ">Area : <span id="area-rhombus">00</span> cm<sup>2</sup></h2>
+              <div class="flex gap-6 mt-4">
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded " type="number" id="base-inputValue-rhombhus" placeholder="d1"><p class="pt-1.5">cm</p>
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded" type="number" id="height-inputValue-rhombhus" placeholder="d2"><p class="pt-1.5">cm</p>
+              </div>
+               <div class="card-actions mt-6">
+                <button onclick="getRhombusArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Number 5 -->
+          <div id="card5" class="card bg-[#e1b12c] shadow-sm pt-8 border-[1px] border-gray-300">
+            <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
+            <div  class="card-body ">
+              <h2 class="card-title text-3xl">Pentagon</h2>
+              <p>Area (A) = 0.5 × p × b</p>
+              <h2 class=" text-lg font-bold 
+              ">Area : <span id="area-pentagon">00</span> cm<sup>2</sup></h2>
+              <div class="flex gap-6 mt-4">
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded " type="number" id="base-inputValue-pentagon" placeholder="p"><p class="pt-1.5">cm</p>
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded" type="number" id="height-inputValue-pentagon" placeholder="b"> <p class="pt-1.5">cm</p>
+              </div>
+               <div class="card-actions mt-6">
+                <button onclick="getPentagonArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card number6 -->
+          <div id="card6" class="card bg-[#c23616] shadow-sm pt-8 border-[1px] border-gray-300">
+            <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+            <div  class="card-body ">
+              <h2 class="card-title text-3xl">Ellipse</h2>
+              <p>Area (A) = πab</p>
+              <h2 class=" text-lg font-bold 
+              ">Area : <span id="ellipseArea">00</span> cm<sup>2</sup></h2>
+              <div class="flex gap-6 mt-4">
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded " type="number" id="base-inputValue-ellipse" placeholder="major"><p class="pt-1.5">cm</p>
+                <input class="bg-[#F1F1F1] border-2 text-black border-gray-300 w-20 p-1.5 rounded" type="number" id="height-inputValue-ellipse" placeholder="minor "> <p class="pt-1.5">cm</p>
+              </div>
+                <div class="card-actions mt-6">
+                <button onclick="ellipseArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+
+       </div>
+    </main>
+    <script src="./area.js"></script>
+</body>
+
+</html>
